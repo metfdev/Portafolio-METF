@@ -1,11 +1,12 @@
 import { ListItem, Anchor, Img, Paragraph, Button } from "./NavBarComponents";
 import { ThemeContext } from "../../context/ThemeProvider";
 import { useContext } from "react";
+import { Theme } from "@tsparticles/engine";
 
 
 function NavBar() {
 
-  const { toggleTema } = useContext(ThemeContext);
+  const { tema, toggleTema } = useContext(ThemeContext);
 
 
   return (
@@ -48,7 +49,7 @@ function NavBar() {
       <div className="flex gap-4 items-center ">
         <button onClick={() => toggleTema("dark")}
         className="rounded-full w-10 h-10 bg-neutral-800/80 flex items-center justify-center transition-all ease-out duration-200  lg:cursor-pointer group/theme lg:hover:brightness-110 ">
-          <p className="text-lg lg:group-hover/theme:text-xl">🌚</p>
+          <p className="text-lg lg:group-hover/theme:text-xl">{tema === "dark" ? "🌞" : "🌚"}</p>
         </button>
         <div className="rounded-lg p-2 md:px-3 md:py-2 bg-gradient-to-r from-cyan-500/50 to-teal-400/50 md:shadow-2xl md:shadow-cyan-500/10 transition-all ease-in duration-200 xl:cursor-pointer group/bars lg:hover:brightness-150">
           <Img
@@ -56,7 +57,7 @@ function NavBar() {
             src="./img/icons/barrs.svg"
             alt="barrs"
           />
-          <Button style="w-full hidden md:flex md:gap-2 text-gray-100 font-semibold transition-all ease-in duration-200 lg:hover:cursor-pointer  ">
+          <Button style="w-full hidden md:flex md:gap-2 text-gray-100 font-semibold transition-all ease-in duration-200 lg:hover:cursor-pointer ">
             <Img
               style="w-5 group-hover/bars:scale-105 transition-all ease-out duration-100 "
               src="./img/icons/download-white.svg"
