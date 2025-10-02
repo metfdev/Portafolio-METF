@@ -15,33 +15,33 @@ function NavBar() {
       </h2>
       <ul className="hidden md:flex space-x-4 text-zinc-500 font-semibold text-md justify-center items-center gap-2">
         <ListItem>
-          <Anchor href="#home">
+          <Anchor href="/">
             <Img src={"./img/icons/house-white.svg"} alt={"home icon"} />
-            <Paragraph>Inicio</Paragraph>
+            <Paragraph>Home</Paragraph>
           </Anchor>
         </ListItem>
         <ListItem>
-          <Anchor href="#skills">
+          <Anchor href="/skills">
             <Img src={"./img/icons/brain-white.svg"} alt={"skills icon"} />
-            <Paragraph>Habilidades</Paragraph>
+            <Paragraph>Skills</Paragraph>
           </Anchor>
         </ListItem>
         <ListItem>
-          <Anchor href="#projects">
+          <Anchor href="/projects">
             <Img src={"./img/icons/maletin-white.svg"} alt={"project icon"} />
-            <Paragraph>Proyectos</Paragraph>
+            <Paragraph>Projects</Paragraph>
           </Anchor>
         </ListItem>
         <ListItem>
-          <Anchor href="#projects">
+          <Anchor href="/learning" target="">
             <Img src={"./img/icons/books-white.svg"} alt={"learning icon"} />
-            <Paragraph>Aprendizaje</Paragraph>
+            <Paragraph>Learning</Paragraph>
           </Anchor>
         </ListItem>
         <ListItem>
-          <Anchor href="#contact">
+          <Anchor href="/contact">
             <Img src={"./img/icons/phone-white.svg"} alt={"contact icon"} />
-            <Paragraph>Contacto</Paragraph>
+            <Paragraph>Contact</Paragraph>
           </Anchor>
         </ListItem>
       </ul>
@@ -62,7 +62,7 @@ function NavBar() {
               src="./img/icons/download-white.svg"
               alt="descargar"
             />
-            Descargar CV
+            View CV
           </Button>
         </div>
       </div>
