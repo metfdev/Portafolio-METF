@@ -1,8 +1,8 @@
 function Learning() {
   return (
-    <div>
+    <section className="page" id="learning">
       <h1>Learning</h1>
-    </div>
+    </section>
   );
 }
 

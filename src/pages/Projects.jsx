@@ -1,8 +1,8 @@
 function Projects() {
   return (
-    <div>
+    <section className="page" id="projects">
       <h1>Projects</h1>
-    </div>
+    </section>
   );
 }
 

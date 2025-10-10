@@ -38,8 +38,8 @@ function Header() {
   }, []);
 
   return (
-    <header className="flex flex-col items-center justify-center lg:grid lg:grid-cols-2 lg:justify-items-center lg:content-center gap-5 lg:gap-5 pb-10 px-8 xl:px-0 cursor-default lg:w-[1100px] xl:w-[1200px] 2xl:w-[1300px] transition-all ease-in duration-200">
-      <div className="flex flex-col items-start  justify-center gap-8">
+    <section className="flex flex-col items-center justify-center lg:grid lg:grid-cols-2 lg:justify-items-center lg:content-center gap-5 lg:gap-5 pb-10 px-8 xl:px-0 cursor-default lg:w-[1100px] xl:w-[1200px] 2xl:w-[1300px] transition-all ease-in duration-200">
+      <section className="flex flex-col items-start  justify-center gap-8">
         <div className="bg-zinc-800/80 py-1 px-2 rounded-full hover:bg-zinc-800/60 transition-all ease-in duration-200">
           <h3 className="text-sm text-center text-gray-400 font-semibold ">
             Available for opportunities
@@ -134,8 +134,8 @@ function Header() {
             />
           </a>
         </div>
-      </div>
-      <div className="flex justify-center  items-center lg:w-full relative">
+      </section>
+      <section className="flex justify-center  items-center lg:w-full relative">
         <div
           ref={openToWork}
           className="absolute -top-2 lg:top-5 -right-5 lg:right-2 xl:right-15  z-10 text-[12px] text-zinc-900 font-semibold rounded-xl px-3 py-1 bg-gradient-to-r from-cyan-500 form-80% to-teal-400 lg:hover:brightness-110  "
@@ -155,8 +155,8 @@ function Header() {
             alt=""
           />
         </div>
-      </div>
-    </header>
+      </section>
+    </section>
   );
 }
 

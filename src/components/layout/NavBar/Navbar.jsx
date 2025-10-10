@@ -1,6 +1,7 @@
 import { ListItem, Anchor, Img, Paragraph, Button } from "./NavBarComponents";
 import { ThemeContext } from "../../../context/ThemeProvider";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 
 function NavBar() {
@@ -15,34 +16,44 @@ function NavBar() {
       </h2>
       <ul className="hidden md:flex space-x-4 text-zinc-500 font-semibold text-md justify-center items-center gap-2">
         <ListItem>
-          <Anchor href="/">
-            <Img src={"./img/icons/house-white.svg"} alt={"home icon"} />
-            <Paragraph>Home</Paragraph>
-          </Anchor>
+          <Link to={"/"}>
+            <Anchor>
+              <Img src={"./img/icons/house-white.svg"} alt={"home icon"} />
+              <Paragraph>Home</Paragraph>
+            </Anchor>
+          </Link>
         </ListItem>
         <ListItem>
-          <Anchor href="/skills">
-            <Img src={"./img/icons/brain-white.svg"} alt={"skills icon"} />
-            <Paragraph>Skills</Paragraph>
-          </Anchor>
+          <Link to={"/skills"}>
+            <Anchor>
+              <Img src={"./img/icons/brain-white.svg"} alt={"skills icon"} />
+              <Paragraph>Skills</Paragraph>
+            </Anchor>
+          </Link>
         </ListItem>
         <ListItem>
-          <Anchor href="/projects">
-            <Img src={"./img/icons/maletin-white.svg"} alt={"project icon"} />
-            <Paragraph>Projects</Paragraph>
-          </Anchor>
+          <Link to={"/projects"}>
+            <Anchor>
+              <Img src={"./img/icons/maletin-white.svg"} alt={"project icon"} />
+              <Paragraph>Projects</Paragraph>
+            </Anchor>
+          </Link>
         </ListItem>
         <ListItem>
-          <Anchor href="/learning" target="">
-            <Img src={"./img/icons/books-white.svg"} alt={"learning icon"} />
-            <Paragraph>Learning</Paragraph>
-          </Anchor>
+          <Link to={"/learning"}>
+            <Anchor >
+              <Img src={"./img/icons/books-white.svg"} alt={"learning icon"} />
+              <Paragraph>Learning</Paragraph>
+            </Anchor>
+          </Link>
         </ListItem>
         <ListItem>
-          <Anchor href="/contact">
-            <Img src={"./img/icons/phone-white.svg"} alt={"contact icon"} />
-            <Paragraph>Contact</Paragraph>
-          </Anchor>
+          <Link to={"/contact"}>
+            <Anchor >
+              <Img src={"./img/icons/phone-white.svg"} alt={"contact icon"} />
+              <Paragraph>Contact</Paragraph>
+            </Anchor>
+          </Link>
         </ListItem>
       </ul>
       <div className="flex gap-4 items-center ">
