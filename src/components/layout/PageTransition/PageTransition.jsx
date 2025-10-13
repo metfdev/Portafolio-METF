@@ -8,18 +8,15 @@ const PageTransition = ({ children }) => {
 
 
   useEffect(() => {
-  const tl = gsap.timeline();
+  // const tl = gsap.timeline();
 
-  tl.fromTo(
+  gsap.fromTo(
     ".page",
-    { x: "100%", opacity: 0 },
-    { x: "0%", opacity: 1, duration: 1, ease: "power4.out" }
+    { x: "500%", opacity: 0 },
+    { x: "0%", opacity: 1, duration: 1, ease: "power2.in" }
   );
 
-  return () => {
-    tl.to(".page", { x: "-100%", opacity: 0, duration: 0.8, ease: "power4.in" });
-  };
-}, [location.pathname]);
+  }, [location.pathname]);
 
 
   return (
