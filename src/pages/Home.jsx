@@ -45,54 +45,56 @@ function Home() {
             Available for opportunities
           </h3>
         </div>
-        <div className="flex flex-col gap-5 justify-center items-start  ">
-          <h1 className="text-5xl lg:text-6xl font-bold  flex flex-col gap-3 ">
-            Hi, I'm
-            <span className="bg-gradient-to-r  from-10% from-cyan-800 to-teal-600  dark:from-cyan-500 dark:to-teal-400  bg-clip-text text-transparent pb-4 font-inter ">
-              Miguel Ticaray
-            </span>
+        <div className="flex flex-col gap-5 justify-center items-start">
+          <h1 className="text-5xl lg:text-6xl bg-gradient-to-r font-bold from-10% from-cyan-800 to-teal-600  dark:from-cyan-500 dark:to-teal-400  bg-clip-text text-transparent pb-4 font-inter">
+            Miguel Ticaray
           </h1>
           <div className="flex flex-col items-start  justify-center gap-8">
             <div className="flex flex-col justify-center items-start gap-5">
               <p className=" text-lg lg:text-2xl font-semibold ">
                 Junior Web Developer
               </p>
-              <p className=" text-md lg:text-xl font-semibold lg:text-left ">
-                Passionate about creating beautiful, functional web experiences with modern technologies. I specialize in React, JavaScript, and responsive design, always eager to learn and grow in the ever-evolving world of web development.
+              <p className=" text-md lg:text-xl font-semibold lg:text-left">
+                Passionate about creating beautiful, functional web experiences
+                with modern technologies. I specialize in React, JavaScript, and
+                responsive design, always eager to learn and grow in the
+                ever-evolving world of web development.
               </p>
             </div>
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex gap-2 items-center">
-                <Img style="w-4 brightness-0 dark:brightness-50 " src="./img/icons/mail.svg" alt="mail" />
+                <Img
+                  style="w-4 brightness-0 dark:brightness-100 "
+                  src="./img/icons/mail-white.svg"
+                  alt="mail"
+                />
                 <p className=" font-semibold text-sm">
                   Miguelticaray@gmail.com
                 </p>
               </div>
-              <div className="flex gap-2 items-center j">
+              <div className="flex gap-2 items-center ">
                 <Img
-                  style="w-5"
-                  src="./img/icons/pinLocation.png"
+                  style="w-4 brightness-0 dark:brightness-100"
+                  src="./img/icons/pingLocation.svg"
                   alt="location"
                 />
-                <p className=" font-semibold text-sm">
-                  Anaco, Venezuela
-                </p>
+                <p className="font-semibold text-sm">Anaco, Venezuela</p>
               </div>
             </div>
           </div>
         </div>
         <div className="flex items-center justify-center gap-3">
-          <Button style="flex gap-3 items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-teal-400 rounded-xl border border-cyan-500 text-black font-semibold text-sm shadow-2xl shadow-cyan-800/20 brightness-110 hover:transform hover:translate-y-[-2px] transition-all ease-in duration-200 xl:cursor-pointer group/contact ">
+          <Button style="flex gap-3 items-center px-8 py-3 bg-gradient-to-r from-10% from-cyan-800 to-teal-600 dark:from-cyan-500 dark:to-teal-400 rounded-xl border dark:border-cyan-500 border-cyan-600 text-white dark:text-black font-semibold text-sm shadow-2xl shadow-cyan-800/20 brightness-110 hover:transform hover:translate-y-[-2px] transition-all ease-in duration-200 xl:cursor-pointer group/contact ">
             <Img
-              style="w-4 transition-all ease-in duration-200 group-hover/contact:scale-110"
-              src="./img/icons/mail-black.svg"
+              style="w-4 transition-all dark:brightness-0 brightness-100 ease-in duration-200 group-hover/contact:scale-110"
+              src="./img/icons/mail-white.svg"
               alt="mail"
             />
             Get in touch
           </Button>
-          <Button style="flex gap-3 items-center px-8 py-3 bg-gradient-to-r from-black to-gray-900 rounded-xl border border-gray-800 text-white font-semibold text-sm shadow-2xl shadow-cyan-900/20 hover:brightness-150 hover:border-cyan-400 transition-all ease-in duration-200 xl:cursor-pointer group/download">
+          <Button style="flex gap-3 items-center px-8 py-3 dark:bg-gradient-to-r dark:from-black dark:to-gray-900 bg-cyan-500/10 rounded-xl border border-gray-400 hover:border-cyan-600 dark:border-gray-800 dark:text-white font-semibold text-sm shadow-2xl shadow-cyan-900/20 dark:hover:brightness-150 dark:hover:border-cyan-400 transition-all ease-in duration-200 xl:cursor-pointer group/download">
             <Img
-              style="w-4 transition-all ease-in duration-200 group-hover/download:scale-110"
+              style="w-4 brightness-0 dark:brightness-100 transition-all ease-in duration-200 group-hover/download:scale-110"
               src="./img/icons/download-white.svg"
               alt="download"
             />
@@ -144,11 +146,11 @@ function Home() {
         </div>
         <div
           ref={experience}
-          className="absolute -bottom-5 lg:bottom-2  -left-5 lg:-left-6 xl:left-5 2xl:left-35 z-10 text-[12px] font-semibold rounded-xl px-3 py-1 bg-gradient-to-r from-neutral-800/80  to-zinc-900/80 text-zinc-100   lg:hover:brightness-110   "
+          className="absolute -bottom-5 lg:bottom-2  -left-5 lg:-left-6 xl:left-5 2xl:left-35 z-10 text-[12px] font-semibold rounded-xl px-3 py-1 bg-gradient-to-r from-neutral-800/80  to-zinc-900/80 text-zinc-100   lg:hover:brightness-110"
         >
-          <p> 2+ Years of Experience</p>
+          <p>+2 Years of Experience</p>
         </div>
-        <div className="flex items-end justify-center rounded-full overflow-hidden w-98  h-98 lg:w-[400px] lg:h-[400px] backdrop-blur-md bg-neutral-700  border-10 border-neutral-950/80 shadow-2xl shadow-zinc-800/80 dark:shadow-cyan-500/15 lg:shadow-none lg:hover:shadow-2xl lg:hover:transform lg:hover:-translate-y-2  dark:lg:hover:shadow-cyan-500/10 lg:hover:shadow-zinc-800/80 transition-all duration-200 ease-in">
+        <div className="flex items-end justify-center rounded-full overflow-hidden w-98 h-98 lg:w-[400px] lg:h-[400px] backdrop-blur-md bg-neutral-700  border-10 border-neutral-950/80 shadow-2xl shadow-zinc-800/80 dark:shadow-cyan-500/15 lg:shadow-none lg:hover:shadow-2xl lg:hover:transform lg:hover:-translate-y-2  dark:lg:hover:shadow-cyan-500/10 lg:hover:shadow-zinc-800/80 transition-all duration-200 ease-in">
           <img
             className="w-full h-full object-top object-cover"
             src="./img/photos/caricartura.png"

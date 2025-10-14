@@ -46,11 +46,11 @@ function Header() {
           </h3>
         </div>
         <div className="flex flex-col gap-5 justify-center items-start  ">
-          <h1 className="text-5xl lg:text-6xl font-bold text-gray-100 flex flex-col gap-4 ">
+          <h2>
             Hi, I'm
-            <span className="bg-gradient-to-r from-cyan-500 to-teal-400 bg-clip-text text-transparent pb-2 font-inter ">
+          </h2>
+          <h1 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-500 to-teal-400 bg-clip-text text-transparent pb-2 font-inter  ">
               Miguel Ticaray
-            </span>
           </h1>
           <div className="flex flex-col items-start  justify-center gap-8">
             <div className="flex flex-col justify-center items-start gap-5">
