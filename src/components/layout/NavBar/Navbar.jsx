@@ -1,6 +1,6 @@
 import { ListItem, Anchor, Img, Paragraph, Button } from "./NavBarComponents";
 import { ThemeContext } from "../../../context/ThemeProvider";
-import { useContext } from "react";
+import { useContext, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 
@@ -8,15 +8,31 @@ import { gsap } from "gsap";
 function NavBar() {
 
   const { tema, toggleTema } = useContext(ThemeContext);
+  const Nav = useRef(null);
 
   const ChangeTheme = () => {
     toggleTema();
     gsap.fromTo(".themeicon", { rotate: 0 }, { rotate: 360, duration: 1 });
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", scrollNav);
+  }, []);
+
+  const scrollNav = () => {
+    if (window.scrollY >= 50) {
+      Nav.current.classList.remove("bg-transparent");
+      Nav.current.classList.add("backdrop-blur-md", "bg-zinc-900/50", "border-b", "border-zinc-600/50", "text-zinc-100");
+
+    } else {
+      Nav.current.classList.remove("backdrop-blur-md", "bg-zinc-900/50", "border-b", "border-zinc-600/50","text-zinc-100");
+      Nav.current.classList.add("bg-transparent");
+    }
+  };
+
 
   return (
-    <nav className="p-5 w-full sticky top-0 z-99 flex justify-between xl:justify-around items-center transition-all ease-out duration-500 border-b border-transparent ">
+    <nav ref={Nav} className="p-5 w-full sticky top-0 z-99 flex justify-between xl:justify-around items-center transition-all ease-out duration-500 border-b border-transparent ">
       <h2 className="font-bold text-balance text-xl  bg-gradient-to-r from-cyan-800 to-teal-600 dark:from-cyan-500 form-10% dark:to-teal-400  bg-clip-text text-transparent hover:scale-105 transition-all ease-in duration-200 cursor-pointer">
         Miguel Ticaray
       </h2>
