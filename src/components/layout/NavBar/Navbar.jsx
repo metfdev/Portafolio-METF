@@ -46,14 +46,6 @@ function NavBar() {
           </Link>
         </ListItem>
         <ListItem>
-          <Link to={"/skills"}>
-            <Anchor>
-              <Img src={"./img/icons/brain-white.svg"} alt={"skills icon"} />
-              <Paragraph>Skills</Paragraph>
-            </Anchor>
-          </Link>
-        </ListItem>
-        <ListItem>
           <Link to={"/projects"}>
             <Anchor>
               <Img src={"./img/icons/maletin-white.svg"} alt={"project icon"} />

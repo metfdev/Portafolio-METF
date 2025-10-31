@@ -2,17 +2,12 @@ function Projects() {
   return (
     <section
       className="flex flex-col gap-20 px-5 lg:py-5 justify-center items-center cursor-default  xl:w-[1100px] 2xl:w-[1300px]">
-      <div className="flex flex-col gap-4 text-center justify-center items-center md:w-150">
         <h2 className="flex flex-col md:flex-row text-4xl gap-2 xl:text-5xl font-bold text-gray-100 ">
           Proyectos
           <span className="bg-gradient-to-r from-cyan-500 to-teal-400 bg-clip-text text-transparent pb-2">
             Destacados
           </span>
         </h2>
-        <p className="text-gray-400 text-xl font-semibold">
-          Una muestra de mis mejores trabajos, demostrando mis habilidades en desarrollo web moderno
-        </p>
-      </div>
       <div className="flex flex-col gap-20 w-full justify-center items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 justify-items-center content-center">
           <div className="flex flex-col gap-6 justify-center items-start">
