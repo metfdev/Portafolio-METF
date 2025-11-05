@@ -1,6 +1,6 @@
-import { ListItem, Anchor, Img, Paragraph, Button } from "./NavBarComponents";
+import { ListItem, Anchor, Img, Button } from "./NavBarComponents";
 import { ThemeContext } from "../../../context/ThemeProvider";
-import { useContext, useRef, useEffect } from "react";
+import { useContext, useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 
@@ -9,6 +9,7 @@ function NavBar() {
 
   const { tema, toggleTema } = useContext(ThemeContext);
   const Nav = useRef(null);
+  const [pageActive, setPageActive] = useState("home");
 
   const ChangeTheme = () => {
     toggleTema();
@@ -39,25 +40,25 @@ function NavBar() {
       <ul className="hidden md:flex space-x-4 text-zinc-500 font-semibold text-md justify-center items-center gap-2">
         <ListItem>
           <Link to={"/"}>
-            <Anchor>
+            <Anchor onclick={setPageActive("home")}>
               <Img src={"./img/icons/house-white.svg"} alt={"home icon"} />
-              <Paragraph>Home</Paragraph>
+              <p ClassName={pageActive === "home" ? "page-active " : "hidden lg:block"}>Home</p>
             </Anchor>
           </Link>
         </ListItem>
         <ListItem>
           <Link to={"/projects"}>
-            <Anchor>
+            <Anchor onclick={setPageActive("projects")}>
               <Img src={"./img/icons/maletin-white.svg"} alt={"project icon"} />
-              <Paragraph>Projects</Paragraph>
+              <p  ClassName={pageActive === "projects" ? "page-active " : "hidden lg:block"}>Projects</p>
             </Anchor>
           </Link>
         </ListItem>
         <ListItem>
           <Link to={"/contact"}>
-            <Anchor >
+            <Anchor onclick={setPageActive("contact")}>
               <Img src={"./img/icons/phone-white.svg"} alt={"contact icon"} />
-              <Paragraph>Contact</Paragraph>
+              <p  ClassName={pageActive === "contact" ? "page-active " : "hidden lg:block"}>Contact</p>
             </Anchor>
           </Link>
         </ListItem>

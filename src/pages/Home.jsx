@@ -6,6 +6,7 @@ import { Button, Img } from "../components/layout/Header/HeaderComponents";
 function Home() {
   const openToWork = useRef(null);
   const experience = useRef(null);
+  const animatedHome = useRef(null);
 
   useGSAP(() => {
     gsap.fromTo(
@@ -36,10 +37,9 @@ function Home() {
       }
     );
   }, []);
-
-
+  
   return (
-    <div>
+    <div ref={animatedHome}>
       <section className="page flex flex-col items-center justify-center lg:grid lg:grid-cols-2 lg:justify-items-center lg:content-center gap-20 lg:gap-5 pb-10 px-8 xl:px-0 cursor-default lg:w-[1100px] xl:w-[1200px] 2xl:w-[1300px] transition-all ease-in duration-200">
         <section className="flex flex-col items-start justify-center gap-8">
           <div className="bg-zinc-800/80 py-1 px-2 rounded-full hover:bg-zinc-800/60 transition-all ease-in duration-200">

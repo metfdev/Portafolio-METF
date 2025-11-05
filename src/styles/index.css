@@ -1,3 +1,15 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .page-active {
+    @apply text-cyan-800 dark:text-cyan-500;
+  }
+}
