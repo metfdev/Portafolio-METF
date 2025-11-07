@@ -1,9 +1,12 @@
+import {TechSlider} from "./TechSlider";
+
+
 function Footer() {
-  return <footer className="p-5 flex justify-center items-center text-sm  dark:text-zinc-400">
-      <div>
-        Make with ❤️ by Miguel Ticaray
-      </div>
+  return (
+    <footer className="flex flex-col justify-center items-center text-sm  dark:text-zinc-400">
+      <TechSlider />
     </footer>
+  );
 }
 
-export { Footer }
+export { Footer };
