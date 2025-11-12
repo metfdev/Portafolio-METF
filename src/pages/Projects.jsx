@@ -1,10 +1,18 @@
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeProvider";
+
+
 function Projects() {
+
+  const { tema } = useContext(ThemeContext);
+
+
   return (
     <section
-      className="flex flex-col gap-20 px-5 lg:py-5 justify-center items-center cursor-default  xl:w-[1100px] 2xl:w-[1300px]">
-        <h2 className="flex flex-col md:flex-row text-4xl gap-2 xl:text-5xl font-bold text-gray-100 ">
+      className="flex flex-col gap-20 px-5 lg:py-5 justify-center items-center cursor-default  xl:w-[1100px] 2xl:w-[1300px] transition-all duration-200 ease-in-out">
+        <h2 className="flex flex-col md:flex-row text-4xl gap-2 xl:text-5xl font-bold  transition-all duration-200 ease-in-out">
           Proyectos
-          <span className="bg-gradient-to-r from-cyan-500 to-teal-400 bg-clip-text text-transparent pb-2">
+          <span className="bg-linear-to-r from-cyan-500 to-teal-400 bg-clip-text text-transparent pb-2 transition-all duration-200 ease-in-out">
             Destacados
           </span>
         </h2>
@@ -13,44 +21,44 @@ function Projects() {
           <div className="flex flex-col gap-6 justify-center items-start">
             <div
               className="flex items-center justify-center gap-2 text-[12px] text-black font-semibold bg-cyan-400 rounded-full px-3 py-1">
-              <img className="w-4" src="./img/icons/start-black.svg" alt="" />
+              <img className="w-4" src="./img/icons/start-black.svg" alt="start icon" />
               <p>
                 Destacado
               </p>
             </div>
             <div className="flex flex-col gap-10 justify-center items-center">
               <div className="flex flex-col gap-4 text-center">
-                <h2 className="text-3xl font-bold text-gray-100">
+                <h2 className="text-3xl font-bold ">
                   Rick and Morty APP
                 </h2>
-                <p className="text-gray-400 text-lg">
+                <p className={tema === "dark" ? "text-gray-400 text-lg transition-all duration-200 ease-in-out" : "text-gray-800 text-lg transition-all duration-200 ease-in-out"}>
                   Desarrollo de una aplicación web de Rick and Morty utilizando JavaScript, Tailwind CSS y Consumo de
                   API.
                 </p>
                 <div className="flex gap-3 justify-center items-center flex-wrap">
-                  <p className="border border-gray-600/50 py-1 px-3 text-gray-100 rounded-full text-sm ">
+                  <p className="border border-gray-600/50 py-1 px-3  rounded-full text-sm ">
                     JavaScript
                   </p>
-                  <p className="border border-gray-600/50 py-1 px-3 text-gray-100 rounded-full text-sm ">
+                  <p className="border border-gray-600/50 py-1 px-3  rounded-full text-sm ">
                     Tailwind CSS
                   </p>
-                  <p className="border border-gray-600/50 py-1 px-3 text-gray-100 rounded-full text-sm ">
+                  <p className="border border-gray-600/50 py-1 px-3  rounded-full text-sm ">
                     Consumo de API
                   </p>
-                  <p className="border border-gray-600/50 py-1 px-3 text-gray-100 rounded-full text-sm ">
+                  <p className="border border-gray-600/50 py-1 px-3  rounded-full text-sm ">
                     Responsive Design
                   </p>
                 </div>
               </div>
               <div className="flex gap-4">
                 <a href="https://metfdev.github.io/RickAndMortty-App/" target="_blank"
-                  className="flex gap-2 items-center text-black text-sm font-semibold transition-all ease-in duration-200 bg-gradient-to-r from-cyan-500 to-teal-400 rounded-lg px-4 py-2 shadow-2xl shadow-cyan-500/10 hover:transform hover:-translate-y-1 group/portfolioView  cursor-default xl:cursor-pointer ">
+                  className="flex gap-2 items-center text-black text-sm font-semibold transition-all ease-in duration-200 bg-linear-to-r from-cyan-500 to-teal-400 rounded-lg px-4 py-2 shadow-2xl shadow-cyan-500/10 hover:transform hover:-translate-y-1 group/portfolioView  cursor-default xl:cursor-pointer ">
                   <img className="w-4 transition-all ease-in duration-200 group-hover/portfolioView:scale-110"
                     src="./img/icons/eye-black.svg" alt="eye icon" />
                   <p>Demo en Vivo</p>
                 </a>
                 <a href="https://github.com/METFdev/RickAndMortty-App" target="_blank"
-                  className="flex gap-3 items-center px-4 py-3 bg-gradient-to-r from-black to-gray-900 rounded-lg border border-gray-800 text-white font-semibold text-sm shadow-2xl shadow-cyan-500/10 hover:brightness-150 hover:border-cyan-400 transition-all ease-in duration-200 cursor-default xl:cursor-pointer group/download">
+                  className="flex gap-3 items-center px-4 py-3 bg-linear-to-r from-black to-gray-900 rounded-lg border border-gray-800 text-white font-semibold text-sm shadow-2xl shadow-cyan-500/10 hover:brightness-150 hover:border-cyan-400 transition-all ease-in duration-200 cursor-default xl:cursor-pointer group/download">
                   <img className="w-4 transition-all ease-in duration-200 group-hover/download:scale-110"
                     src="./img/icons/github-white.svg" alt="github icon" />
                   Código Fuente
@@ -62,7 +70,7 @@ function Projects() {
             className="flex w-full overflow-hidden rounded-2xl border border-zinc-600 lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-cyan-500/10 transition-all ease-in duration-200">
             <img id="destacado-1"
               className="w-full h-full object-center object-cover rounded-2xl lg:hover:scale-105 transition-all ease-in duration-200"
-              src="./img/photos/rickAndMorty.png" alt=""/>
+              src="./img/photos/rickAndMorty.png" alt="rick and morty app"/>
           </div>
         </div>
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 content-center justify-items-center">
@@ -75,37 +83,37 @@ function Projects() {
           <div className="flex flex-col gap-6 justify-center items-start ">
             <div
               className="flex items-center justify-center gap-2 text-[12px] text-black font-semibold bg-cyan-400 rounded-full px-3 py-1">
-              <img className="w-4" src="./img/icons/start-black.svg" alt="" />
+              <img className="w-4" src="./img/icons/start-black.svg" alt="start icon" />
               <p>
                 Destacado
               </p>
             </div>
             <div className="flex flex-col gap-10 justify-center items-center w-full">
               <div className="flex flex-col gap-4 text-center ">
-                <h2 className="text-3xl font-bold text-gray-100 ">
+                <h2 className="text-3xl font-bold  ">
                   Maqueta de Spotify
                 </h2>
                 <p className="text-gray-400 text-lg">
                   Desarrollo de una maqueta de Spotify utilizando Tailwind CSS sin funcionalidad.
                 </p>
                 <div className="flex gap-3 justify-center items-center">
-                  <p className="border border-gray-600/50 py-1 px-3 text-gray-100 rounded-full text-sm ">
+                  <p className="border border-gray-600/50 py-1 px-3  rounded-full text-sm ">
                     Tailwind CSS
                   </p>
-                  <p className="border border-gray-600/50 py-1 px-3 text-gray-100 rounded-full text-sm ">
+                  <p className="border border-gray-600/50 py-1 px-3  rounded-full text-sm ">
                     Responsive Design
                   </p>
                 </div>
               </div>
               <div className="flex gap-4">
                 <a href="https://metfdev.github.io/Copy-SpotMusic/" target="_blank"
-                  className="flex gap-2 items-center text-black text-sm font-semibold transition-all ease-in duration-200 bg-gradient-to-r from-cyan-500 to-teal-400 rounded-lg px-4 py-2 shadow-2xl shadow-cyan-500/10 hover:transform hover:-translate-y-1 group/portfolioView  cursor-default xl:cursor-pointer ">
+                  className="flex gap-2 items-center text-black text-sm font-semibold transition-all ease-in duration-200 bg-linear-to-r from-cyan-500 to-teal-400 rounded-lg px-4 py-2 shadow-2xl shadow-cyan-500/10 hover:transform hover:-translate-y-1 group/portfolioView  cursor-default xl:cursor-pointer ">
                   <img className="w-4 transition-all ease-in duration-200 group-hover/portfolioView:scale-110"
                     src="./img/icons/eye-black.svg" alt="eye icon" />
                   <p>Demo en Vivo</p>
                 </a>
                 <a href="https://github.com/METFdev/Copy-SpotMusic" target="_blank"
-                  className="flex gap-3 items-center px-4 py-3 bg-gradient-to-r from-black to-gray-900 rounded-lg border border-gray-800 text-white font-semibold text-sm shadow-2xl shadow-cyan-500/10 hover:brightness-150 hover:border-cyan-400 transition-all ease-in duration-200 cursor-default xl:cursor-pointer group/download">
+                  className="flex gap-3 items-center px-4 py-3 bg-linear-to-r from-black to-gray-900 rounded-lg border border-gray-800 text-white font-semibold text-sm shadow-2xl shadow-cyan-500/10 hover:brightness-150 hover:border-cyan-400 transition-all ease-in duration-200 cursor-default xl:cursor-pointer group/download">
                   <img className="w-4 transition-all ease-in duration-200 group-hover/download:scale-110"
                     src="./img/icons/github-white.svg" alt="github icon" />
                   Código Fuente
@@ -116,12 +124,12 @@ function Projects() {
         </div>
       </div>
       <div className="flex flex-col gap-10">
-        <h2 className="text-4xl xl:text-5xl font-bold text-gray-100 text-center">
+        <h2 className="text-4xl xl:text-5xl font-bold  text-center">
           Otros Proyectos
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
           <div
-            className="flex flex-col gap-4 bg-gradient-to-r from-zinc-900 to-zinc-800 rounded-2xl border border-zinc-800 lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-cyan-500/10 transition-all ease-in duration-200 group/otrosProyectos">
+            className="flex flex-col gap-4 bg-linear-to-r from-zinc-900 to-zinc-800 rounded-2xl border border-zinc-800 lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-cyan-500/10 transition-all ease-in duration-200 group/otrosProyectos">
             <div className="flex justify-center items-center rounded-t-xl overflow-hidden relative">
               <img
                 className="w-full h-full object-center object-cover rounded-t-xl lg:group-hover/otrosProyectos:scale-110 lg:group-hover/otrosProyectos:brightness-50 transition-all ease-in duration-200"
@@ -159,7 +167,7 @@ function Projects() {
             </div>
           </div>
           <div
-            className="flex flex-col gap-4 bg-gradient-to-r from-zinc-900 to-zinc-800 rounded-2xl border border-zinc-800 lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-cyan-500/10 transition-all ease-in duration-200 group/otrosProyectos">
+            className="flex flex-col gap-4 bg-linear-to-r from-zinc-900 to-zinc-800 rounded-2xl border border-zinc-800 lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-cyan-500/10 transition-all ease-in duration-200 group/otrosProyectos">
             <div className="flex justify-center items-center rounded-t-xl overflow-hidden relative">
               <img
                 className="w-full h-full object-center object-cover rounded-t-xl lg:group-hover/otrosProyectos:scale-110 lg:group-hover/otrosProyectos:brightness-50 transition-all ease-in duration-200"
@@ -197,7 +205,7 @@ function Projects() {
             </div>
           </div>
           <div
-            className="flex flex-col gap-4 bg-gradient-to-r from-zinc-900 to-zinc-800 rounded-2xl border border-zinc-800 lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-cyan-500/10 transition-all ease-in duration-200 group/otrosProyectos">
+            className="flex flex-col gap-4 bg-linear-to-r from-zinc-900 to-zinc-800 rounded-2xl border border-zinc-800 lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-cyan-500/10 transition-all ease-in duration-200 group/otrosProyectos">
             <div className="flex justify-center items-center rounded-t-xl overflow-hidden relative">
               <img
                 className="w-full h-full object-center object-cover rounded-t-xl lg:group-hover/otrosProyectos:scale-110 lg:group-hover/otrosProyectos:brightness-50 transition-all ease-in duration-200"
@@ -235,7 +243,7 @@ function Projects() {
             </div>
           </div>
           <div
-            className="flex flex-col gap-4 bg-gradient-to-r from-zinc-900 to-zinc-800 rounded-2xl border border-zinc-800 lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-cyan-500/10 transition-all ease-in duration-200 group/otrosProyectos">
+            className="flex flex-col gap-4 bg-linear-to-r from-zinc-900 to-zinc-800 rounded-2xl border border-zinc-800 lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-cyan-500/10 transition-all ease-in duration-200 group/otrosProyectos">
             <div className="flex justify-center items-center rounded-t-xl overflow-hidden relative">
               <img
                 className="w-full h-full object-center object-cover rounded-t-xl lg:group-hover/otrosProyectos:scale-110 lg:group-hover/otrosProyectos:brightness-50 transition-all ease-in duration-200"
@@ -276,7 +284,7 @@ function Projects() {
             </div>
           </div>
           <div
-            className="flex flex-col gap-4 bg-gradient-to-r from-zinc-900 to-zinc-800 rounded-2xl border border-zinc-800 lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-cyan-500/10 transition-all ease-in duration-200 group/otrosProyectos">
+            className="flex flex-col gap-4 bg-linear-to-r from-zinc-900 to-zinc-800 rounded-2xl border border-zinc-800 lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-cyan-500/10 transition-all ease-in duration-200 group/otrosProyectos">
             <div className="flex justify-center items-center rounded-t-xl overflow-hidden relative">
               <img
                 className="w-full h-full object-center object-cover rounded-t-xl lg:group-hover/otrosProyectos:scale-110 lg:group-hover/otrosProyectos:brightness-50 transition-all ease-in duration-200"

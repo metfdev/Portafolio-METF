@@ -43,7 +43,7 @@ function NavBar() {
       );
       title.current.classList.add("bg-zinc-100",);
       ul.current.classList.remove("text-zinc-500");
-      ul.current.classList.add("dark:text-zinc-900");
+      ul.current.classList.add("dark:text-zinc-600");
     } else {
       Nav.current.classList.remove(
         "backdrop-blur-md",
@@ -65,6 +65,8 @@ function NavBar() {
         "dark:to-teal-400"
       );
       ul.current.classList.add("text-zinc-500");
+      ul.current.classList.remove("dark:text-zinc-600");
+
     }
   };
 
@@ -75,7 +77,7 @@ function NavBar() {
     >
       <h2
         ref={title}
-        className="font-bold text-balance text-xl bg-linear-to-r from-cyan-800 to-teal-600 dark:from-cyan-500 form-10% dark:to-teal-400  bg-clip-text text-transparent hover:scale-105 transition-all ease-in duration-200 cursor-pointer"
+        className="font-bold text-balance text-xl bg-linear-to-r from-cyan-800 to-teal-600 dark:from-cyan-500 form-10% dark:to-teal-400  bg-clip-text text-transparent hover:scale-105 transition-all ease-in duration-200 cursor-default"
       >
         Miguel Ticaray
       </h2>
@@ -147,7 +149,7 @@ function NavBar() {
             alt={tema === "dark" ? "sun" : "moon"}
           />
         </Button>
-        <div className="rounded-lg p-2 md:px-3 md:py-2 bg-gradient-to-r from-cyan-800 to-teal-600 dark:from-cyan-500/50 dark:to-teal-400/50 md:shadow-2xl md:shadow-cyan-500/10 transition-all ease-in duration-200 xl:cursor-pointer group/bars lg:hover:brightness-150">
+        <div className="rounded-lg p-2 md:px-3 md:py-2 bg-linear-to-r from-cyan-800 to-teal-600 dark:from-cyan-500/50 dark:to-teal-400/50 md:shadow-2xl md:shadow-cyan-500/10 transition-all ease-in duration-200 xl:cursor-pointer group/bars lg:hover:brightness-150">
           <Img
             style="w-5 brightness-200 md:hidden"
             src="./img/icons/barrs.svg"
