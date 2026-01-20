@@ -4,7 +4,7 @@ function Anchor({
   onclick = null,
 }) {
   return (
-    <button className={style} onClick={() => onclick()}>
+    <button className={style} onClick={() => onclick && onclick()}>
       {children}
     </button>
   );

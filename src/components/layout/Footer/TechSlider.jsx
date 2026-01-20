@@ -27,7 +27,7 @@ export const TechSlider = () => {
   const { tema } = useContext(ThemeContext);
 
   return (
-    <div className="relative w-full overflow-hidden py-8  ">
+    <div className="relative w-full overflow-hidden mb-8">
       <div className={tema === "dark" ? "absolute inset-y-0 left-0 w-24 bg-linear-to-r from-neutral-950 to-transparent z-10" : "absolute inset-y-0 left-0 w-24 bg-linear-to-r from-neutral-100 to-transparent z-10"} />
       <div className={tema === "dark" ? "absolute inset-y-0 right-0 w-24 bg-linear-to-l from-neutral-950 to-transparent z-10" : "absolute inset-y-0 right-0 w-24 bg-linear-to-l from-neutral-100 to-transparent z-10"}/>
 

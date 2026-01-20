@@ -1,0 +1,75 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "view_cv": "Ver CV"
+  },
+  "home": {
+    "available": "Disponible para oportunidades",
+    "title": "Miguel Ticaray",
+    "role": "Desarrollador Web Junior",
+    "description": "Apasionado por crear experiencias web hermosas y funcionales con tecnologías modernas. Me especializo en React, JavaScript y diseño responsivo, siempre ansioso por aprender y crecer en el mundo en constante evolución del desarrollo web.",
+    "get_in_touch": "Contáctame",
+    "view_cv": "Ver CV",
+    "open_to_work": "Disponible para Trabajar",
+    "experience": "+2 Años de Experiencia",
+    "location": "Anaco, Venezuela"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Destacados",
+    "featured": "Destacado",
+    "live_demo": "Demo en Vivo",
+    "source_code": "Código Fuente",
+    "others_title": "Otros Proyectos",
+    "items": {
+      "rick_and_morty": {
+        "title": "Rick and Morty APP",
+        "description": "Desarrollo de una aplicación web de Rick and Morty utilizando JavaScript, Tailwind CSS y Consumo de API.",
+        "tags": [
+          "JavaScript",
+          "Tailwind CSS",
+          "Consumo de API",
+          "Responsive Design"
+        ]
+      },
+      "spotify": {
+        "title": "Maqueta de Spotify",
+        "description": "Desarrollo de una maqueta de Spotify utilizando Tailwind CSS sin funcionalidad.",
+        "tags": ["Tailwind CSS", "Responsive Design"]
+      },
+      "calculator": {
+        "title": "Calculadora Web",
+        "description": "Desarrollada con Tailwind CSS y JavaScript para realizar operaciones básicas.",
+        "tags": ["Tailwind CSS", "JavaScript", "+1 más"]
+      },
+      "memory_game": {
+        "title": "Juego de Memoria",
+        "description": "Desarrollado con Tailwind CSS y JavaScript utilizando libreria GSAP para animaciones.",
+        "tags": ["Tailwind CSS", "JavaScript", "+2 más"]
+      },
+      "todo_list": {
+        "title": "To Do List",
+        "description": "Desarrollado con Tailwind CSS y JavaScript utilizando LocalStorage para almacenar los datos temporales.",
+        "tags": ["Tailwind CSS", "JavaScript", "LocalStorage"]
+      },
+      "buscador": {
+        "title": "Buscador en Tiempo Real",
+        "description": "Aplicación de búsqueda en tiempo real utilizando JavaScript y filtrado dinámico.",
+        "tags": ["JavaScript", "HTML", "CSS"]
+      },
+      "cines_unidos": {
+        "title": "Cines Unidos 2.0",
+        "description": "Maqueta mejorada de la plataforma Cines Unidos centrada en la experiencia de usuario.",
+        "tags": ["HTML", "CSS", "JavaScript"]
+      }
+    }
+  },
+  "contact": {
+    "title": "Contacto"
+  },
+  "not_found": {
+    "title": "404 No Encontrado"
+  }
+}

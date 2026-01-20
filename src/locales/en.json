@@ -1,0 +1,75 @@
+{
+  "navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact",
+    "view_cv": "View CV"
+  },
+  "home": {
+    "available": "Available for opportunities",
+    "title": "Miguel Ticaray",
+    "role": "Junior Web Developer",
+    "description": "Passionate about creating beautiful and functional web experiences with modern technologies. I specialize in React, JavaScript and responsive design, always eager to learn and grow in the ever-evolving world of web development.",
+    "get_in_touch": "Get in Touch",
+    "view_cv": "View CV",
+    "open_to_work": "Open to Work",
+    "experience": "+2 Years of Experience",
+    "location": "Anaco, Venezuela"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Featured",
+    "featured": "Featured",
+    "live_demo": "Live Demo",
+    "source_code": "Source Code",
+    "others_title": "Other Projects",
+    "items": {
+      "rick_and_morty": {
+        "title": "Rick and Morty APP",
+        "description": "Development of a Rick and Morty web application using JavaScript, Tailwind CSS and API Consumption.",
+        "tags": [
+          "JavaScript",
+          "Tailwind CSS",
+          "API Consumption",
+          "Responsive Design"
+        ]
+      },
+      "spotify": {
+        "title": "Spotify Mockup",
+        "description": "Development of a Spotify mockup using Tailwind CSS without functionality.",
+        "tags": ["Tailwind CSS", "Responsive Design"]
+      },
+      "calculator": {
+        "title": "Web Calculator",
+        "description": "Developed with Tailwind CSS and JavaScript to perform basic operations.",
+        "tags": ["Tailwind CSS", "JavaScript", "+1 more"]
+      },
+      "memory_game": {
+        "title": "Memory Game",
+        "description": "Developed with Tailwind CSS and JavaScript using GSAP library for animations.",
+        "tags": ["Tailwind CSS", "JavaScript", "+2 more"]
+      },
+      "todo_list": {
+        "title": "To Do List",
+        "description": "Developed with Tailwind CSS and JavaScript using LocalStorage to store temporary data.",
+        "tags": ["Tailwind CSS", "JavaScript", "LocalStorage"]
+      },
+      "buscador": {
+        "title": "Real-time Search",
+        "description": "Real-time search application using JavaScript and dynamic filtering.",
+        "tags": ["JavaScript", "HTML", "CSS"]
+      },
+      "cines_unidos": {
+        "title": "Cines Unidos 2.0",
+        "description": "Improved mockup of the Cines Unidos platform focused on user experience.",
+        "tags": ["HTML", "CSS", "JavaScript"]
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "not_found": {
+    "title": "404 Not Found"
+  }
+}
