@@ -11,31 +11,54 @@ function Home() {
   const animatedHome = useRef(null);
   const { t } = useTranslation();
 
-  useGSAP(() => {
-    gsap.fromTo(
-      openToWork.current,
-      { y: -10 },
-      {
-        y: 10,
-        duration: 2.5,
-        ease: "power1.inOut",
-        yoyo: true,
-        repeat: -1,
-      },
-    );
+  useGSAP(
+    () => {
+      // Floating animations
+      gsap.fromTo(
+        openToWork.current,
+        { y: -10 },
+        {
+          y: 10,
+          duration: 2.5,
+          ease: "power1.inOut",
+          yoyo: true,
+          repeat: -1,
+        },
+      );
 
-    gsap.fromTo(
-      experience.current,
-      { y: 10 },
-      {
-        y: -10,
-        duration: 2.5,
-        ease: "power1.inOut",
-        yoyo: true,
-        repeat: -1,
-      },
-    );
-  }, []);
+      gsap.fromTo(
+        experience.current,
+        { y: 10 },
+        {
+          y: -10,
+          duration: 2.5,
+          ease: "power1.inOut",
+          yoyo: true,
+          repeat: -1,
+        },
+      );
+
+      // Entry animations
+      const tl = gsap.timeline({ delay: 0.2 });
+      tl.from(".home-content > *", {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out",
+      }).from(
+        ".home-image",
+        {
+          opacity: 0,
+          scale: 0.8,
+          duration: 1,
+          ease: "back.out(1.7)",
+        },
+        "-=0.6",
+      );
+    },
+    { scope: animatedHome },
+  );
 
   const socialLinks = [
     {
@@ -60,8 +83,8 @@ function Home() {
       ref={animatedHome}
       className="w-full flex justify-center overflow-hidden"
     >
-      <section className="page flex flex-col items-center justify-center lg:grid lg:grid-cols-2 lg:justify-items-center lg:content-center gap-20 lg:gap-5 pb-10 px-8 xl:px-0 cursor-default lg:w-[1100px] xl:w-[1200px] 2xl:w-[1300px] transition-all duration-300">
-        <section className="flex flex-col items-start justify-center gap-8">
+      <section className="page flex flex-col items-center justify-center lg:grid lg:grid-cols-2 lg:justify-items-center lg:content-center gap-20 lg:gap-5 pb-10 px-8 xl:px-0 cursor-default lg:w-[1100px] xl:w-[1200px] 2xl:w-[1300px]">
+        <section className="home-content flex flex-col items-start justify-center gap-8">
           <div className="bg-zinc-800/80 dark:bg-zinc-800/80 py-1 px-4 rounded-full hover:bg-zinc-800/60 transition-all duration-200">
             <h3 className="text-sm text-center text-gray-100 font-semibold ">
               {t("home.available")}
@@ -111,7 +134,7 @@ function Home() {
             <Link to="/contact">
               <Button style="flex gap-3 items-center px-8 py-4 bg-linear-to-r from-cyan-600 to-teal-500 dark:from-cyan-500 dark:to-teal-400 rounded-xl text-white dark:text-black font-bold text-base shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:-translate-y-1 transition-all">
                 <Img
-                  style="w-4 dark:invert invert-0"
+                  style="w-4 dark:invert dark:invert-0"
                   src="./img/icons/mail-white.svg"
                   alt="mail"
                 />
@@ -147,7 +170,7 @@ function Home() {
           </div>
         </section>
 
-        <section className="flex justify-center 2xl:justify-end items-center py-4 lg:py-0 w-full relative">
+        <section className="home-image flex justify-center 2xl:justify-end items-center py-4 lg:py-0 w-full relative">
           <div
             ref={openToWork}
             className="absolute -top-2 lg:top-5 -right-5 lg:right-2 xl:-right-10-5 2xl:-right-25 z-10 text-[12px] text-zinc-900 font-bold rounded-xl px-4 py-1.5 bg-linear-to-r from-cyan-400 to-teal-300 shadow-md"

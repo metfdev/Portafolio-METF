@@ -67,7 +67,35 @@
     }
   },
   "contact": {
-    "title": "Contacto"
+    "title": "Contacto",
+    "subtitle": "Ponte en contacto conmigo",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo Electrónico",
+      "subject": "Asunto",
+      "service": "Servicio Interesado",
+      "message": "Mensaje",
+      "send": "Enviar Mensaje",
+      "placeholder_name": "Tu nombre completo",
+      "placeholder_email": "tu@email.com",
+      "placeholder_message": "Escribe tu mensaje aquí...",
+      "select_service": "Selecciona un servicio",
+      "services": {
+        "web_design": "Diseño Web",
+        "development": "Desarrollo Frontend",
+        "maintenance": "Mantenimiento Web",
+        "consulting": "Consultoría Técnica",
+        "other": "Otro"
+      },
+      "success": "¡Mensaje enviado con éxito!",
+      "error": "Hubo un error al enviar el mensaje."
+    },
+    "info": {
+      "location_title": "Mi Ubicación",
+      "social_title": "Redes Sociales",
+      "email_title": "Correo Directo",
+      "address": "Anaco, Anzoátegui, Venezuela"
+    }
   },
   "not_found": {
     "title": "404 No Encontrado"

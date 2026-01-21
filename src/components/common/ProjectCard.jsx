@@ -81,7 +81,7 @@ function ProjectCard({ project, isFeatured = false, reverse = false }) {
 
   if (!isFeatured) {
     return (
-      <div className="flex flex-col gap-4 bg-linear-to-r dark:from-zinc-900 from-transparent dark:to-zinc-800 to-transparent rounded-2xl border border-zinc-400 dark:border-zinc-800 lg:hover:-translate-y-1 lg:hover:shadow-2xl dark:lg:hover:shadow-cyan-500/10 lg:hover:shadow-zinc-800/50 transition-all ease-in duration-200 group/otrosProyectos">
+      <div className="flex flex-col gap-4 bg-linear-to-r dark:from-zinc-900 from-transparent dark:to-zinc-800 to-transparent rounded-2xl border border-zinc-400 dark:border-zinc-800 lg:hover:-translate-y-1 lg:hover:shadow-2xl dark:lg:hover:shadow-cyan-500/10 lg:hover:shadow-zinc-800/50 transition-[transform,box-shadow,background-color,border-color] ease-in duration-200 group/otrosProyectos">
         <div className="flex justify-center items-center rounded-t-xl overflow-hidden relative">
           <img
             className="w-full h-full object-center object-cover rounded-t-xl lg:group-hover/otrosProyectos:scale-110 lg:group-hover/otrosProyectos:brightness-50 transition-all ease-in duration-200"

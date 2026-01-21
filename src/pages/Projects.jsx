@@ -1,8 +1,59 @@
+import { useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 import { ProjectCard } from "../components/common/ProjectCard";
 
 function Projects() {
   const { t } = useTranslation();
+  const projectsRef = useRef(null);
+
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({ delay: 0.2 }); // Delay para sincronizar con la apertura de muros
+      tl.from(".projects-title > *", {
+        opacity: 0,
+        y: -30,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power4.out",
+      })
+        .from(
+          ".featured-projects > *",
+          {
+            opacity: 0,
+            y: 60,
+            duration: 1,
+            stagger: 0.4,
+            ease: "power3.out",
+          },
+          "-=0.5",
+        )
+        .from(
+          ".other-projects-title",
+          {
+            opacity: 0,
+            y: 20,
+            duration: 0.8,
+            ease: "power2.out",
+          },
+          "-=0.6",
+        )
+        .from(
+          ".other-projects-grid > *",
+          {
+            opacity: 0,
+            scale: 0.9,
+            y: 30,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "power2.out",
+          },
+          "-=0.4",
+        );
+    },
+    { scope: projectsRef },
+  );
 
   const featuredProjects = [
     {
@@ -96,15 +147,18 @@ function Projects() {
   ];
 
   return (
-    <section className="flex flex-col gap-20 px-5 lg:py-5 justify-center items-center cursor-default xl:w-[1100px] 2xl:w-[1300px] transition-all duration-200 ease-in-out">
-      <h2 className="flex flex-col md:flex-row text-4xl gap-2 xl:text-5xl font-bold transition-all duration-200 ease-in-out">
-        {t("projects.title")}
-        <span className="bg-linear-to-r from-cyan-500 to-teal-400 bg-clip-text text-transparent pb-2 transition-all duration-200 ease-in-out">
+    <section
+      ref={projectsRef}
+      className="flex flex-col gap-20 px-5 lg:py-5 justify-center items-center cursor-default xl:w-[1100px] 2xl:w-[1300px]"
+    >
+      <h2 className="projects-title flex flex-col md:flex-row text-4xl gap-2 xl:text-5xl font-bold">
+        <span>{t("projects.title")}</span>
+        <span className="bg-linear-to-r from-cyan-500 to-teal-400 bg-clip-text text-transparent pb-2">
           {t("projects.subtitle")}
         </span>
       </h2>
 
-      <div className="flex flex-col gap-20 w-full justify-center items-center">
+      <div className="featured-projects flex flex-col gap-20 w-full justify-center items-center">
         {featuredProjects.map((project, index) => (
           <ProjectCard
             key={index}
@@ -116,10 +170,10 @@ function Projects() {
       </div>
 
       <div className="flex flex-col gap-10 w-full">
-        <h2 className="text-4xl xl:text-5xl font-bold text-center">
+        <h2 className="other-projects-title text-4xl xl:text-5xl font-bold text-center">
           {t("projects.others_title")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="other-projects-grid grid grid-cols-1 md:grid-cols-2 gap-8">
           {otherProjects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
