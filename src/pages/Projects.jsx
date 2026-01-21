@@ -149,7 +149,7 @@ function Projects() {
   return (
     <section
       ref={projectsRef}
-      className="flex flex-col gap-20 px-5 lg:py-5 justify-center items-center cursor-default xl:w-[1100px] 2xl:w-[1300px]"
+      className="flex flex-col gap-20 px-5 pb-10 lg:pb-15 lg:pt-5 justify-center items-center cursor-default xl:w-[1100px] 2xl:w-[1300px]"
     >
       <h2 className="projects-title flex flex-col md:flex-row text-4xl gap-2 xl:text-5xl font-bold">
         <span>{t("projects.title")}</span>
