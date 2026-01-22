@@ -8,7 +8,7 @@ import { Button } from "../components/ui/Button/Button";
 
 /**
  * @description Contact page component
- * 
+ *
  * @returns {JSX.Element}
  */
 function Contact() {
@@ -307,20 +307,32 @@ function Contact() {
                 t("contact.form.send")
               )}
             </Button>
-
-            {formStatus === "success" && (
-              <p className="text-teal-600 dark:text-teal-400 font-medium animate-bounce">
-                {t("contact.form.success")}
-              </p>
-            )}
-            {formStatus === "error" && (
-              <p className="text-rose-600 dark:text-rose-400 font-medium">
-                {t("contact.form.error")}
-              </p>
-            )}
           </form>
         </div>
       </div>
+      {formStatus === "success" && (
+        <dialog open className="w-full h-full absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm p-4 rounded-lg">
+          <div className="flex flex-col items-center justify-center gap-7 w-80 h-40 bg-white dark:bg-slate-800 p-4 rounded-2xl">
+            <p className="text-teal-600 dark:text-teal-400 font-medium animate-bounce">
+              {t("contact.form.success")}
+            </p>
+            <button className="bg-cyan-600 text-white px-4 py-2 rounded-lg lg:cursor-pointer hover:bg-cyan-500 hover:scale-[1.02] active:scale-95 transition-all" onClick={() => setFormStatus("")}>Cerrar</button>
+          </div>
+        </dialog>
+      )}
+      {formStatus === "error" && (
+        <dialog
+          open
+          className="w-full h-full absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm p-4 rounded-lg"
+        >
+          <div className="flex flex-col items-center justify-center gap-7 w-80 h-40 bg-white dark:bg-slate-800 p-4 rounded-2xl">
+            <p className="text-rose-600 dark:text-rose-400 font-medium">
+              {t("contact.form.error")}
+            </p>
+            <button className="bg-cyan-600 text-white px-4 py-2 rounded-lg lg:cursor-pointer hover:bg-cyan-500 hover:scale-[1.02] active:scale-95 transition-all" onClick={() => setFormStatus("")}>Cerrar</button>
+          </div>
+        </dialog>
+      )}
     </section>
   );
 }
