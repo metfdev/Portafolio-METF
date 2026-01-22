@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 import { Button, Img } from "../components/layout/Header/HeaderComponents";
 import { useTranslation } from "react-i18next";
 
+/**
+ * @description Home page component
+ * 
+ * @returns {JSX.Element}
+ */
 function Home() {
   const openToWork = useRef(null);
   const experience = useRef(null);
@@ -13,7 +18,6 @@ function Home() {
 
   useGSAP(
     () => {
-      // Floating animations
       gsap.fromTo(
         openToWork.current,
         { y: -10 },
@@ -38,19 +42,29 @@ function Home() {
         },
       );
 
-      // Entry animations
       const tl = gsap.timeline({ delay: 0.2 });
-      tl.from(".home-content > *", {
-        opacity: 0,
-        y: 30,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "power3.out",
-      }).from(
+      tl.fromTo(
+        ".home-content > *",
+        {
+          opacity: 0,
+          y: 30,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power3.out",
+        },
+      ).fromTo(
         ".home-image",
         {
           opacity: 0,
           scale: 0.8,
+        },
+        {
+          opacity: 1,
+          scale: 1,
           duration: 1,
           ease: "back.out(1.7)",
         },
@@ -85,7 +99,7 @@ function Home() {
     >
       <section className="page flex flex-col items-center justify-center lg:grid lg:grid-cols-2 lg:justify-items-center lg:content-center gap-20 lg:gap-5 pb-10 px-8 xl:px-0 cursor-default lg:w-[1100px] xl:w-[1200px] 2xl:w-[1300px]">
         <section className="home-content flex flex-col items-start justify-center gap-8">
-          <div className="bg-zinc-800/80 dark:bg-zinc-800/80 py-1 px-4 rounded-full hover:bg-zinc-800/60 transition-all duration-200">
+          <div className="bg-zinc-800/80 dark:bg-zinc-800/80 py-1 px-4 rounded-full hover:bg-zinc-800/60 transition-[background-color] duration-200">
             <h3 className="text-sm text-center text-gray-100 font-semibold ">
               {t("home.available")}
             </h3>

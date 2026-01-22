@@ -6,6 +6,11 @@ import { Input } from "../components/ui/Input/Input";
 import { TextArea } from "../components/ui/Input/TextArea";
 import { Button } from "../components/ui/Button/Button";
 
+/**
+ * @description Contact page component
+ * 
+ * @returns {JSX.Element}
+ */
 function Contact() {
   const { t } = useTranslation();
   const contactRef = useRef(null);
@@ -69,7 +74,6 @@ function Contact() {
     e.preventDefault();
     setFormStatus("sending");
 
-    // Basic Validation and Sanitization
     const sanitizedData = {
       name: sanitizeInput(formData.name),
       email: sanitizeInput(formData.email),
@@ -80,10 +84,7 @@ function Contact() {
     };
 
     try {
-      // NOTE: Replace the ID below with your Formspree ID or use info@mtfsystemservice.com if already configured
-      // For now, we use a fetch to Formspree
       const response = await fetch("https://formspree.io/f/mykkvkkj", {
-        // Placeholder ID
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(sanitizedData),
@@ -116,9 +117,7 @@ function Contact() {
       </div>
 
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        {/* Left Side: Info Cards */}
         <div className="lg:col-span-4 flex flex-col gap-4">
-          {/* Social Media Card */}
           <div className="contact-card px-6 py-4 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md rounded-3xl border border-white/20 dark:border-slate-800/50 shadow-xl shadow-cyan-500/5">
             <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
               <span className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-600">
@@ -155,7 +154,6 @@ function Contact() {
             </div>
           </div>
 
-          {/* Email Card */}
           <div className="contact-card px-6 py-4 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md rounded-3xl border border-white/20 dark:border-slate-800/50 shadow-xl shadow-cyan-500/5">
             <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
               <span className="w-8 h-8 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-600">
@@ -176,7 +174,6 @@ function Contact() {
             </a>
           </div>
 
-          {/* Map Card */}
           <div className="contact-card overflow-hidden bg-white/70 dark:bg-slate-900/70 backdrop-blur-md rounded-3xl border border-white/20 dark:border-slate-800/50 shadow-xl shadow-cyan-500/5">
             <div className="px-6 py-4">
               <h3 className="text-xl font-semibold flex items-center gap-2">
@@ -205,7 +202,6 @@ function Contact() {
           </div>
         </div>
 
-        {/* Right Side: Contact Form */}
         <div className="lg:col-span-8 contact-form">
           <form
             onSubmit={handleSubmit}

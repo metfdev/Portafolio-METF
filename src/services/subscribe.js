@@ -1,4 +1,4 @@
-import {supabase} from "../supabase";
+import {supabase} from "@supabase/supabase-js";
 
 export const saveNewsletterEmail = async (email) => {
   const { data, error } = await supabase.from('newsletter').insert({
