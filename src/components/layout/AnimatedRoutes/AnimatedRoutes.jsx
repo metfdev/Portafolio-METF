@@ -30,7 +30,7 @@ function AnimatedRoutes (){
 
   return (
     <div className="w-full h-full flex items-center justify-center">
-      <Routes basename={"/portafolio"} location={displayLocation} key={displayLocation.pathname}>
+      <Routes location={displayLocation} key={displayLocation.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
