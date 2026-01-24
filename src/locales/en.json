@@ -24,6 +24,10 @@
     "source_code": "Source Code",
     "others_title": "Other Projects",
     "items": {
+      "rifas_marilu": {
+        "title": "Rifas Marilu",
+        "description": "Development of a web application for raffles."
+      },
       "rick_and_morty": {
         "title": "Rick and Morty APP",
         "description": "Development of a Rick and Morty web application using JavaScript, Tailwind CSS and API Consumption.",

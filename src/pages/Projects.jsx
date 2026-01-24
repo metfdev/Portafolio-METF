@@ -57,6 +57,14 @@ function Projects() {
 
   const featuredProjects = [
     {
+      titleKey: "projects.items.rifas_marilu.title",
+      descriptionKey: "projects.items.rifas_marilu.description",
+      tagsKeys: [
+      ],
+      liveDemo: "https://rifasmarilu.com/",
+      image: "./img/photos/rifasMarilu.png",
+    },
+    {
       titleKey: "projects.items.rick_and_morty.title",
       descriptionKey: "projects.items.rick_and_morty.description",
       tagsKeys: [
@@ -68,7 +76,11 @@ function Projects() {
       liveDemo: "https://metfdev.github.io/RickAndMortty-App/",
       sourceCode: "https://github.com/METFdev/RickAndMortty-App",
       image: "./img/photos/rickAndMorty.png",
+      reverse: true,
     },
+  ];
+
+  const otherProjects = [
     {
       titleKey: "projects.items.spotify.title",
       descriptionKey: "projects.items.spotify.description",
@@ -79,11 +91,7 @@ function Projects() {
       liveDemo: "https://metfdev.github.io/Copy-SpotMusic/",
       sourceCode: "https://github.com/METFdev/Copy-SpotMusic",
       image: "./img/photos/SpotMusic1.png",
-      reverse: true,
     },
-  ];
-
-  const otherProjects = [
     {
       titleKey: "projects.items.calculator.title",
       descriptionKey: "projects.items.calculator.description",

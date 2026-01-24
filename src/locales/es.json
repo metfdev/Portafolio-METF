@@ -24,9 +24,13 @@
     "source_code": "Código Fuente",
     "others_title": "Otros Proyectos",
     "items": {
+      "rifas_marilu":{
+        "title": "Rifas Marilu",
+        "description": "Desarrollo de una aplicación web de rifas."
+      },
       "rick_and_morty": {
         "title": "Rick and Morty APP",
-        "description": "Desarrollo de una aplicación web de Rick and Morty utilizando JavaScript, Tailwind CSS y Consumo de API.",
+        "description": "Desarrollo de una aplicación web de Rick and Morty.",
         "tags": [
           "JavaScript",
           "Tailwind CSS",

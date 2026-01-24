@@ -1,11 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Tag } from "./Tag";
-import { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeProvider";
 
 function ProjectCard({ project, isFeatured = false, reverse = false }) {
   const { t } = useTranslation();
-  const { theme } = useContext(ThemeContext);
 
   const cardContent = (
     <div
@@ -49,11 +46,12 @@ function ProjectCard({ project, isFeatured = false, reverse = false }) {
             />
             <p>{t("projects.live_demo")}</p>
           </a>
-          <a
-            href={project.sourceCode}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex gap-3 items-center px-4 py-3 bg-linear-to-r from-black to-gray-900 rounded-lg border border-gray-800 text-white font-semibold text-sm shadow-2xl shadow-cyan-500/10 hover:brightness-150 hover:border-cyan-400 transition-all ease-in duration-200 group/download"
+          {project.sourceCode && (
+            <a
+              href={project.sourceCode}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-3 items-center px-4 py-3 bg-linear-to-r from-black to-gray-900 rounded-lg border border-gray-800 text-white font-semibold text-sm shadow-2xl shadow-cyan-500/10 hover:brightness-150 hover:border-cyan-400 transition-all ease-in duration-200 group/download"
           >
             <img
               className="w-4 transition-all ease-in duration-200 group-hover/download:scale-110"
@@ -62,6 +60,7 @@ function ProjectCard({ project, isFeatured = false, reverse = false }) {
             />
             {t("projects.source_code")}
           </a>
+          )}
         </div>
       </div>
     </div>
